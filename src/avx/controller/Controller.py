@@ -86,8 +86,8 @@ class Controller(object):
                         ch = ControllerHttp(self)
                         ch.start()
 
-        except ValueError:
-            logging.exception("Cannot parse config.json:")
+        except ValueError as e:
+            logging.exception("Cannot parse config: " + str(e))
 
     def registerClient(self, clientURI):
         self.clients.append(clientURI)
