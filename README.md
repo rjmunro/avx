@@ -1,4 +1,4 @@
-# AVX - Audio-Visual Control Extensions 
+# AVX - Audio-Visual Control Extensions
 
 [![Build Status](https://travis-ci.org/jamesremuscat/avx.svg?branch=master)](https://travis-ci.org/jamesremuscat/avx)
 [![Coverage Status](https://coveralls.io/repos/jamesremuscat/avx/badge.svg?branch=master&service=github)](https://coveralls.io/github/jamesremuscat/avx?branch=master)
@@ -31,7 +31,7 @@ from source yourself (`python setup.py bdist_egg`) and install using easy_instal
 * Pyro4
 * setuptools
 
-In theory, `easy_install` should take care of the dependencies for you. 
+In theory, `easy_install` should take care of the dependencies for you.
 
 Mapping of physical hardware devices through serial ports to virtual devices is
 done in the `config.json` file. A typical definition of a single-device system
@@ -50,7 +50,7 @@ may look like:
     }
   ]
 }
-``` 
+```
 
 Elements under "options" are passed directly as named parameters to the
 constructor of the class. Most, but not all, current devices require
@@ -65,7 +65,7 @@ to each device, so balance these between descriptive and concise.
 
 ## RUNNING
 
-You will need a Pyro4 nameserver running somewhere on your network. The 
+You will need a Pyro4 nameserver running somewhere on your network. The
 `runNameserver.sh` script will take care of this for you, or use the
 `contrib/pyro-nsd` init script for Debian (maybe others?)
 
@@ -73,7 +73,7 @@ The `runController.py` script will start a Controller instance and register it
 with the Pyro4 nameserver, making it available to all machines on your network.
 By default it will load a `config.json` configuration file, or whatever you
 specify with -c on the commandline. Installing via pip/easy_install will
-generate an `avx-controller` script which is run in the same way. 
+generate an `avx-controller` script which is run in the same way.
 
 The controller machine can also use the `contrib/avx-controller` init script
 to run the controller as a daemon.
@@ -132,3 +132,7 @@ Currently the devices best supported include:
 
 In many cases support is partial but straightforward to improve - patches
 welcome!
+
+## Running tests
+
+`python setup.py test` will run the test suite.

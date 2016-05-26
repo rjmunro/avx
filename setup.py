@@ -27,6 +27,7 @@ setup(
       """,
     setup_requires=["nose>=1.0"],
     tests_require=["mock"],
+    test_suite="nose.collector",
     install_requires=["enum34", "Pyro4 >= 4.20", "pyserial", "pyusb", "semantic_version"],
     entry_points={
         'console_scripts': [
